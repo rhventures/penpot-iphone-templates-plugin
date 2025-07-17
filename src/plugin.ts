@@ -1,4 +1,4 @@
-penpot.ui.open("Penpot plugin starter template", `?theme=${penpot.theme}`);
+penpot.ui.open("IPhone UI Mockup Template", `?theme=${penpot.theme}`);
 
 
 penpot.ui.onMessage<string>((message) => {

@@ -50,8 +50,34 @@ p {
   padding: 10px;
 }
 
-.button{
+#button{
   display:flex;
   justify-content: center;
-  padding: 10px;
+  padding-top: 300px; 
 }
+
+#pic1{ 
+  position: absolute;
+  z-index: 6; 
+ } 
+ #pic2{ 
+  position: absolute;
+  z-index: 5; 
+ } 
+  #pic3{ 
+  position: absolute;
+  z-index: 4; 
+ } 
+
+ #pic4{ 
+  position: absolute;
+  z-index: 3; 
+ } 
+ #pic5{ 
+  position: absolute;
+  z-index: 2;  
+ } 
+  #pic6{ 
+    position: absolute;
+    z-index: 1; 
+ } 
