@@ -26,7 +26,7 @@ Options for the IPhone:
 
  *All IPhone come with a Dark Mode Version
 
- Users can resize the IPhone once placed through setting a specific width and height and well as dragging. Text must be scaled individually by pressing the 'K' key and then resizing. 
+ Users can resize the IPhone once placed through setting a specific width and height and well as dragging- press 'K' first to resize everything including text. Text can also be scaled individually by pressing the 'K' key and then resizing. 
 
 
 ## How to use
