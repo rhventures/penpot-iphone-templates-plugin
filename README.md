@@ -1,8 +1,8 @@
 # Penpot IPhone UI App Template Plugin
 
-This Penpot Plugin is designed to insert IPhone templates into your project for UI Mockups
+This Penpot Plugin is designed to insert iPhone templates into your project for UI Mockups
 
-Options for the IPhone:
+Options for the iPhone:
  - 12' mini
  - 12' 
  - 12' pro
@@ -24,9 +24,9 @@ Options for the IPhone:
  - 16' plus
  - 16' pro max
 
- *All IPhone come with a Dark Mode Version
+ *All iPhones come with a Dark Mode Version
 
- Users can resize the IPhone once placed through setting a specific width and height and well as dragging- press 'K' first to resize everything including text. Text can also be scaled individually by pressing the 'K' key and then resizing. 
+ Users can resize the iPhone once placed through setting a specific width and height and well as dragging- press 'K' first to resize everything including text. Text can also be scaled individually by pressing the 'K' key and then resizing. 
 
 
 ## How to use
@@ -46,7 +46,7 @@ If running successfully, a link of the local network host will appear. Ex: ` htt
 
 Open up the 'Plugin Manager' within Penpot. Paste the following url (your local host with `/manifest.json` at the end) and click 'Install'. The plugin will appear in your 'Installed Plugins' list which you can click 'OPEN' to use
 
-*{localHost}/manifest.json*
+http://localhost:4400/manifest.json
 
 ## Feedback and Support
 To contribute to the development of this project, please refer to the instructions on how to run Penpot Locally
