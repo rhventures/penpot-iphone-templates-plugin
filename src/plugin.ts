@@ -4,19 +4,18 @@ penpot.ui.open("IPhone UI Mockup Template", `?theme=${penpot.theme}`);
 penpot.ui.onMessage<string>((message) => {
   if (message.includes("create")) {
 
-    // ---------------------------------------------------------------------------------IPHONE-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     //Adjusting the width and height of the phone will adjust the scaling of the icons as well 
     //All width and heights have been the base size scaled by a factor of 150 to fit on the Penpot screen
-    var widthIphone13 = 379.5;     //379.5
-    var heightIphone13 = 777;      //777 
-    var cameraChoice = 1;
-    var version = "";
+    let widthIphone13 = 379.5;     //379.5
+    let heightIphone13 = 777;      //777 
+    let cameraChoice = 1;
+    let version = "";
 
-    var boardColor= "#ffffff";
-    var iconColor = "#000000";
+    let boardColor= "#ffffff";
+    let iconColor = "#000000";
 
-    var battColor1 = "#d8d8d8";
-    var battColor2 = "#d8d8d8";
+    let battColor1 = "#d8d8d8";
+    let battColor2 = "#d8d8d8";
   
     //Super Retina XDR Display - 5.4"
     if(message.includes("Version1I")){
@@ -299,13 +298,12 @@ penpot.ui.onMessage<string>((message) => {
             phoneGroup.name= "IPhone -  " + version;
             if(message.includes("Dark")){
               phoneGroup.name+=" (Dark Mode)";
-            }
           }
         }
+      }
     }
-     
   }
-}); 
+});
 
 // Update the theme in the iframe
 penpot.on("themechange", (theme) => {

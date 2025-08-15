@@ -12,6 +12,7 @@ body {
 p {
   margin-block-end: 0.75rem;
 }
+
 .title{
   text-align:center;
   font-size:40px;
@@ -32,8 +33,8 @@ p {
 } 
 
 @media (max-width:400px){
-  .dropdowns{
-    flex-direction: column;
+.dropdowns{
+  flex-direction: column;
   }
 }
 
@@ -59,25 +60,29 @@ p {
 #pic1{ 
   position: absolute;
   z-index: 6; 
- } 
- #pic2{ 
+} 
+
+#pic2{ 
   position: absolute;
   z-index: 5; 
- } 
-  #pic3{ 
+} 
+
+#pic3{ 
   position: absolute;
   z-index: 4; 
- } 
+} 
 
- #pic4{ 
+#pic4{ 
   position: absolute;
   z-index: 3; 
- } 
- #pic5{ 
+} 
+
+#pic5{ 
   position: absolute;
   z-index: 2;  
- } 
-  #pic6{ 
-    position: absolute;
-    z-index: 1; 
- } 
+} 
+
+#pic6{ 
+  position: absolute;
+  z-index: 1; 
+} 

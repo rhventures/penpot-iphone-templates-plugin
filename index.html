@@ -6,8 +6,8 @@
     <title>IPhone UI Mockup Template</title>
     <script>
       function phoneType(){
-        var type = document.getElementById('phoneType').value;
-        var lightDark = "Light";
+        let type = document.getElementById('phoneType').value;
+        let lightDark = "Light";
         if(type == "IPhone"){ 
           lightDark = "Light";
         }
@@ -17,12 +17,12 @@
         return lightDark;
       }
       function changeI(){
-        var img1 = document.getElementById("pic1");
-        var img2 = document.getElementById("pic2");
-        var img3 = document.getElementById("pic3");
-        var img4 = document.getElementById("pic4");
-        var version=document.getElementById("versionSelectorI").value;
-        var button = document.getElementById("button");
+        let img1 = document.getElementById("pic1");
+        let img2 = document.getElementById("pic2");
+        let img3 = document.getElementById("pic3");
+        let img4 = document.getElementById("pic4");
+        let version=document.getElementById("versionSelectorI").value;
+        let button = document.getElementById("button");
       
         if(version.includes("Version1I")){
           img1.style.width = "150px";
@@ -86,14 +86,14 @@
             //console.log("data-handler:", element.dataset.handler);
       }
       function createMessage(){
-        var img1 = document.getElementById("pic1");
-        var img2 = document.getElementById("pic2");
-        var img3 = document.getElementById("pic3");
-        var img4 = document.getElementById("pic4");
+        let img1 = document.getElementById("pic1");
+        let img2 = document.getElementById("pic2");
+        let img3 = document.getElementById("pic3");
+        let img4 = document.getElementById("pic4");
 
-        var version = changeI();
-        var type = phoneType();
-        var message = "create" +type+version;
+        let version = changeI();
+        let type = phoneType();
+        let message = "create" +type+version;
         console.log(message);
 
         if(message.includes("LightVersion1I") || message.includes("LightVersion2I") || message.includes("LightVersion3I")){
@@ -125,7 +125,7 @@
           console.log("true");
         }
 
-        var element= document.getElementById("Button");
+        let element= document.getElementById("Button");
         element.setAttribute("data-handler", message);
         
         console.log("data-handler:", element.dataset.handler);
@@ -141,8 +141,8 @@
       <div class = "typeContainer">
       <label>Choose a Type: </label>
       <select id= "phoneType" onchange = createMessage()>
-        <option value="IPhone">IPhone</option>
-        <option value="IPhoneD">IPhone (Dark Mode)</option>
+        <option value="IPhone">Light Mode</option>
+        <option value="IPhoneD">Dark Mode</option>
       </select>
     </div>
       <br>
@@ -183,11 +183,11 @@
       <img src="IPhoneCamera2Light.png" width="150px" height="300px" id="pic3">
       <img src="IPhoneCamera2Dark.png" width="150px" height="300px" id="pic4"> </div>
     
-    <div id="button"><button type="button" id = "Button" data-appearance="primary" data-handler="createVersion1I - name1"> <!--Sets the Data of the Button to be create-text-->
+    <div id="button"><button type="button" id = "Button" data-appearance="primary" data-handler="createVersion1I - name1">
       Insert
-    </button></div>
+      </button>
+    </div>
 
     <script type="module" src="/src/main.ts"></script>
-    <!--<script type="module" src="/src/plugin.ts"></script>-->
   </body>
 </html>
