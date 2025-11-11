@@ -3,22 +3,190 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Penpot plugin example</title>
+    <title>IPhone UI Mockup Template</title>
+    <script>
+      function phoneType(){
+        let type = document.getElementById('phoneType').value;
+        let lightDark = "Light";
+        if(type == "IPhone"){ 
+          lightDark = "Light";
+        }
+        if(type == "IPhoneD"){
+          lightDark = "Dark";
+        }
+        return lightDark;
+      }
+      function changeI(){
+        let img1 = document.getElementById("pic1");
+        let img2 = document.getElementById("pic2");
+        let img3 = document.getElementById("pic3");
+        let img4 = document.getElementById("pic4");
+        let version=document.getElementById("versionSelectorI").value;
+        let button = document.getElementById("button");
+      
+        if(version.includes("Version1I")){
+          img1.style.width = "150px";
+          img1.style.height = "300px";
+          img2.style.width = "150px";
+          img2.style.height = "300px";
+          button.style.paddingTop = "300px";
+
+        }
+         else if(version.includes("Version2I")){
+          img1.style.width = "175px";
+          img1.style.height = "350px";
+          img2.style.width = "175px";
+          img2.style.height = "350px";
+          button.style.paddingTop = "350px";
+        }
+        else if(version.includes("Version3I")){
+          img1.style.width = "200px";
+          img1.style.height = "400px";
+          img2.style.width = "200px";
+          img2.style.height = "400px";
+          button.style.paddingTop = "400px";         
+        }
+        else if(version.includes("Version4I")){
+          img3.style.width = "175px";
+          img3.style.height = "350px";
+          img4.style.width = "175px";
+          img4.style.height = "350px";
+          button.style.paddingTop = "350px";
+        }
+        else if(version.includes("Version5I")){
+          img3.style.width = "200px";
+          img3.style.height = "400px";
+          img4.style.width = "200px";
+          img4.style.height = "400px";  
+          button.style.paddingTop = "400px";      
+        }
+        else if(version.includes("Version6I")){
+          img3.style.width = "250px";
+          img3.style.height = "500px";
+          img4.style.width = "250px";
+          img4.style.height = "500px";
+          button.style.paddingTop = "500px";
+          
+        }
+        else if(version.includes("Version7I")){
+          img3.style.width = "300px";
+          img3.style.height = "600px";
+          img4.style.width = "300px";
+          img4.style.height = "600px";
+          button.style.paddingTop = "600px";
+        }
+
+        console.log(version);
+        return version;
+
+        //If you don't need to have light/dark version, you can remove the createMessage() and include the following code
+            //var message = "create"+ version;
+            //var element= document.getElementById("Button");
+            //element.setAttribute("data-handler", message);
+            //console.log("data-handler:", element.dataset.handler);
+      }
+      function createMessage(){
+        let img1 = document.getElementById("pic1");
+        let img2 = document.getElementById("pic2");
+        let img3 = document.getElementById("pic3");
+        let img4 = document.getElementById("pic4");
+
+        let version = changeI();
+        let type = phoneType();
+        let message = "create" +type+version;
+        console.log(message);
+
+        if(message.includes("LightVersion1I") || message.includes("LightVersion2I") || message.includes("LightVersion3I")){
+          img1.style.visibility = "visible";
+          img2.style.visibility = "hidden";
+          img3.style.visibility = "hidden";
+          img4.style.visibility = "hidden";
+          console.log("true");
+        }
+        else if(message.includes("DarkVersion1I") || message.includes("DarkVersion2I") || message.includes("DarkVersion3I")){
+          img1.style.visibility = "hidden";
+          img2.style.visibility = "visible";
+          img3.style.visibility = "hidden";
+          img4.style.visibility = "hidden";
+          console.log("true");
+        }
+        else if(message.includes("LightVersion4I") || message.includes("LightVersion5I") || message.includes("LightVersion6I")|| message.includes("LightVersion7I")){
+          img1.style.visibility = "hidden";
+          img2.style.visibility = "hidden";
+          img3.style.visibility = "visible";
+          img4.style.visibility = "hidden";
+          console.log("true");
+        }
+        else if(message.includes("DarkVersion4I") || message.includes("DarkVersion5I") || message.includes("DarkVersion6I")|| message.includes("DarkVersion7I")){
+          img1.style.visibility = "hidden";
+          img2.style.visibility = "hidden";
+          img3.style.visibility = "hidden";
+          img4.style.visibility = "visible";
+          console.log("true");
+        }
+
+        let element= document.getElementById("Button");
+        element.setAttribute("data-handler", message);
+        
+        console.log("data-handler:", element.dataset.handler);
+
+      }
+
+    </script>
   </head>
   <body>
-    <p>Penpot plugin starter template</p>
+    <p class="title">UI App Template</p>
 
-    <p>
-      Checkout the
-      <a target="_blank" href="https://help.penpot.app/plugins/"
-        >documentation</a
-      >
-      to get started.
-    </p>
+    <div class = "dropdowns">
+      <div class = "typeContainer">
+      <label>Choose a Type: </label>
+      <select id= "phoneType" onchange = createMessage()>
+        <option value="IPhone">Light Mode</option>
+        <option value="IPhoneD">Dark Mode</option>
+      </select>
+    </div>
+      <br>
+      <div class="versionContainer">
+      <label>Choose a Version: </label>
+      <select id="versionSelectorI" onchange = createMessage()>
+        <option value="Version1I - name1">12' mini</option>
+        <option value="Version2I - name1">12'</option>
+        <option value="Version2I - name2">12' pro</option>
+        <option value="Version3I - name1">12' pro max</option>
 
-    <button type="button" data-appearance="primary" data-handler="create-text">
-      Create text
-    </button>
+        <option value="Version1I - name2">13' mini</option>
+        <option value="Version2I - name3">13'</option>
+        <option value="Version2I - name4">13' pro</option>
+        <option value="Version3I - name2">13' pro max</option>
+
+        <option value="Version2I - name5">14'</option>
+        <option value="Version4I - name1">14' pro</option>
+        <option value="Version3I - name3">14' plus</option>
+        <option value="Version6I - name1">14' pro max</option>
+
+        <option value="Version4I - name2">15'</option>
+        <option value="Version4I - name3">15' pro</option>
+         <option value="Version6I - name2">15' plus</option>
+         <option value="Version6I - name3">15' pro max</option>
+
+        <option value="Version4I - name4">16'</option>
+        <option value="Version5I - name1">16' pro</option>
+        <option value="Version6I - name4">16' plus</option>
+        <option value="Version7I - name1">16' pro max</option>
+      </select>        
+      </div>
+
+    </div>
+    <div class="img">
+      <img src="IPhoneCamera1Light.png" width="150px" height="300px" id="pic1">
+      <img src="IPhoneCamera1Dark.png" width="150px" height="300px" id="pic2">
+      <img src="IPhoneCamera2Light.png" width="150px" height="300px" id="pic3">
+      <img src="IPhoneCamera2Dark.png" width="150px" height="300px" id="pic4"> </div>
+    
+    <div id="button"><button type="button" id = "Button" data-appearance="primary" data-handler="createVersion1I - name1">
+      Insert
+      </button>
+    </div>
 
     <script type="module" src="/src/main.ts"></script>
   </body>

@@ -1,6 +1,6 @@
 {
-  "name": "Penpot starter plugin",
+  "name": "IPhone UI App Template",
   "code": "plugin.js",
-  "description": "This is a starter plugin for Penpot",
+  "description": "This plugin inserts IPhone UI Mockup Templates",
   "permissions": ["content:read", "content:write"]
 }

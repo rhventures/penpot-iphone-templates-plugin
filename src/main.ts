@@ -4,10 +4,12 @@ import "./style.css";
 const searchParams = new URLSearchParams(window.location.search);
 document.body.dataset.theme = searchParams.get("theme") ?? "light";
 
-document.querySelector("[data-handler='create-text']")?.addEventListener("click", () => {
+document.querySelector("[id = 'Button']")?.addEventListener("click", () => {
   // send message to plugin.ts
-  parent.postMessage("create-text", "*");
+  console.log(document.getElementById("Button")?.dataset.handler);
+  parent.postMessage(document.getElementById("Button")?.dataset.handler, "*");
 });
+
 
 // Listen plugin.ts messages
 window.addEventListener("message", (event) => {
@@ -15,3 +17,4 @@ window.addEventListener("message", (event) => {
     document.body.dataset.theme = event.data.theme;
   }
 });
+
